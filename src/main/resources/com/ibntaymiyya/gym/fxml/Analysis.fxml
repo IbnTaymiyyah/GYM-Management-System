@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="903.0" prefWidth="1762.0" style="-fx-background-color: #F7F8FF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ibntaymiyya.gym.controllers.Analysis">
+   <children>
+      <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="71.0" prefWidth="1762.0" spacing="5.0" style="-fx-background-color: #F7F8FF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MFXButton fx:id="back_btn_analysisP" buttonType="RAISED" depthLevel="LEVEL5" graphicTextGap="0.0" onAction="#mainPage" prefHeight="45.0" prefWidth="156.0" rippleColor="#6068ff" styleClass="buttonBack" stylesheets="@../css/Buttons.css" text="رجوع للصفحه الرئيسيه" wrapText="true">
+               <HBox.margin>
+                  <Insets left="5.0" right="18.0" />
+               </HBox.margin>
+            </MFXButton>
+         </children>
+      </HBox>
+      <MFXScrollPane fitToHeight="true" fitToWidth="true" layoutY="73.0" maxHeight="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" pannable="true" prefHeight="971.0" prefWidth="1762.0" style="-fx-background-color: #F7F8FF;" thumbColor="RED" thumbHoverColor="#b5b5b5" trackColor="BLACK" vbarPolicy="ALWAYS" viewOrder="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="73.0">
+         <content>
+            <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="1050.0" prefWidth="1750.0" spacing="5.0" style="-fx-background-color: #F7F8FF;">
+               <children>
+                  <FlowPane alignment="CENTER" hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="1701.0" prefWrapLength="200.0" vgap="10.0">
+                     <children>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="88.0" prefWidth="336.0" styleClass="analysis-Small-widgets" stylesheets="@../css/Widgets.css">
+                           <children>
+                              <Label fx:id="num_profit_current_month" layoutX="95.0" layoutY="20.0" styleClass="label-PNU-33px" stylesheets="@../css/Labels.css" text="15.000">
+                                 <font>
+                                    <Font name="PNU Regular" size="33.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="2.0" right="2.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="94.0" layoutY="66.0" prefHeight="33.0" styleClass="label-PNURegular-18px" stylesheets="@../css/Labels.css" text="الايرادات هذا الشهر">
+                                 <font>
+                                    <Font name="PNU Regular" size="18.0" />
+                                 </font>
+                              </Label>
+                              <MFXFontIcon fx:id="profit_Icon" layoutX="50.0" layoutY="62.0" wrappingWidth="4.0" />
+                              <Circle fill="#0dff0033" layoutX="45.0" layoutY="55.0" radius="38.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                           <FlowPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </FlowPane.margin>
+                        </AnchorPane>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="346.0" styleClass="analysis-Small-widgets" stylesheets="@../css/Widgets.css">
+                           <children>
+                              <Circle fill="#0036fa33" layoutX="45.0" layoutY="55.0" radius="38.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Label fx:id="num_all_members" layoutX="95.0" layoutY="20.0" styleClass="label-PNU-33px" stylesheets="@../css/Labels.css" text="200">
+                                 <font>
+                                    <Font name="PNU Regular" size="33.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="2.0" right="2.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="94.0" layoutY="66.0" styleClass="label-PNURegular-18px" stylesheets="@../css/Labels.css" text="كل المشتركين">
+                                 <font>
+                                    <Font name="PNU Regular" size="18.0" />
+                                 </font>
+                              </Label>
+                              <MFXFontIcon fx:id="members_Icon" layoutX="50.0" layoutY="62.0" wrappingWidth="5.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                           <FlowPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </FlowPane.margin>
+                        </AnchorPane>
+                        <AnchorPane cacheShape="false" centerShape="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="85.0" prefWidth="346.0" scaleShape="false" styleClass="analysis-Small-widgets" stylesheets="@../css/Widgets.css">
+                           <children>
+                              <Circle fill="#eb595933" layoutX="45.0" layoutY="55.0" radius="38.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Label fx:id="num_end_sub" layoutX="95.0" layoutY="20.0" styleClass="label-PNU-33px" stylesheets="@../css/Labels.css" text="200">
+                                 <font>
+                                    <Font name="PNU Regular" size="33.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="2.0" right="2.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="94.0" layoutY="66.0" styleClass="label-PNURegular-18px" stylesheets="@../css/Labels.css" text="اشتراكات منتهية">
+                                 <font>
+                                    <Font name="PNU Regular" size="18.0" />
+                                 </font>
+                              </Label>
+                              <MFXFontIcon fx:id="endSubs_Icon" layoutX="50.0" layoutY="62.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                           <FlowPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </FlowPane.margin>
+                        </AnchorPane>
+                        <AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="83.0" prefWidth="346.0" styleClass="analysis-Small-widgets" stylesheets="@../css/Widgets.css">
+                           <children>
+                              <Circle fill="#ffc80033" layoutX="45.0" layoutY="55.0" radius="38.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Label fx:id="num_hold_sub" layoutX="95.0" layoutY="20.0" styleClass="label-PNU-33px" stylesheets="@../css/Labels.css" text="200">
+                                 <font>
+                                    <Font name="PNU Regular" size="33.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="2.0" right="2.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="94.0" layoutY="66.0" prefHeight="33.0" prefWidth="174.0" styleClass="label-PNURegular-18px" stylesheets="@../css/Labels.css" text="اشتراكات مجمدة " wrapText="true">
+                                 <font>
+                                    <Font name="PNU Regular" size="18.0" />
+                                 </font>
+                              </Label>
+                              <MFXFontIcon fx:id="holdSubs_Icon" layoutX="50.0" layoutY="62.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                           <FlowPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </FlowPane.margin>
+                        </AnchorPane>
+                     </children>
+                  </FlowPane>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="438.0" prefWidth="1732.0">
+                     <children>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="54.0" prefWidth="1722.0" spacing="10.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <Button fx:id="profitButton_Chart" alignment="CENTER" minHeight="40.0" mnemonicParsing="false" onAction="#setProfitCharts" prefWidth="73.0" styleClass="button-ProfitAnalysis" stylesheets="@../css/Buttons.css" text="الايرادات" wrapText="true" />
+                              <Button fx:id="allMembersButton_Chart" alignment="CENTER" minHeight="40.0" mnemonicParsing="false" onAction="#setMembersCharts" styleClass="button-AllMembersAnalysis" stylesheets="@../css/Buttons.css" text="كل المشتركين" wrapText="true">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </Button>
+                              <Button fx:id="endSubsButton_Chart" alignment="CENTER" minHeight="40.0" mnemonicParsing="false" onAction="#setEndSubsCharts" styleClass="button-ExpireSubAnalysis" stylesheets="@../css/Buttons.css" text="اشتراكات منتهية" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </Button>
+                               <Button fx:id="holdSubsButton_Chart" alignment="CENTER" minHeight="40.0" mnemonicParsing="false" onAction="#setHoldSubsCharts" styleClass="button-HoldSubsAnalysis" stylesheets="@../css/Buttons.css" text="اشتراكات مجمدة" wrapText="true">
+                                   <padding>
+                                       <Insets left="5.0" right="5.0" />
+                                   </padding>
+                               </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </HBox>
+                        <AnchorPane maxHeight="1.7976931348623157E308" prefHeight="365.0" prefWidth="1732.0" style="-fx-background-radius: 20px;">
+                           <effect>
+                              <DropShadow height="42.99" radius="26.490000000000002" width="64.97">
+                                 <color>
+                                    <Color opacity="0.12977099418640137" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <HBox alignment="CENTER" layoutX="716.0" layoutY="133.0" prefHeight="365.0" prefWidth="1732.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane fx:id="ancherPane_DateRange" minWidth="200.0" prefHeight="365.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15px;">
+                                       <children>
+                                          <VBox alignment="CENTER" layoutX="50.0" layoutY="64.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="200.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="تحديد مدة معينه">
+                                                   <font>
+                                                      <Font name="PNU Medium" size="19.0" />
+                                                   </font>
+                                                </Label>
+                                                <MFXDatePicker fx:id="startProfitRange_Date" allowEdit="false" floatMode="BORDER" floatingText="بداية" nodeOrientation="RIGHT_TO_LEFT" popupOffsetX="-400.0" popupOffsetY="5.0" prefHeight="39.0" prefWidth="189.0" stylesheets="@../css/MainPage.css" textLimit="500" />
+                                                <MFXDatePicker fx:id="endProfitRange_Date" allowEdit="false" floatMode="BORDER" floatingText="نهاية" nodeOrientation="RIGHT_TO_LEFT" popupOffsetX="-600.0" popupOffsetY="5.0" prefHeight="39.0" prefWidth="189.0" textLimit="500" />
+                                                <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="200.0" />
+                                                <Button fx:id="applayProfitRange" alignment="CENTER" minHeight="40.0" mnemonicParsing="false" onAction="#setDateRange" prefHeight="40.0" prefWidth="140.0" styleClass="button-ProfitAnalysis" stylesheets="@../css/Buttons.css" text="تطبيق" wrapText="true" />
+                                                <Button fx:id="cancelProfitRange" alignment="CENTER" minHeight="40.0" mnemonicParsing="false" onAction="#cancelProfitRange" styleClass="button-ExpireSubAnalysis" stylesheets="@../css/Buttons.css" text="الغاء التحديد" wrapText="true">
+                                                   <padding>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </padding>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children></AnchorPane>
+                                    <AnchorPane fx:id="archPane_Charts" layoutX="504.0" layoutY="10.0" minWidth="400.0" prefHeight="365.0" prefWidth="744.0" style="-fx-background-color: white; -fx-background-radius: 15px;" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="9.0" left="9.0" right="9.0" top="9.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" minHeight="500.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="403.0" prefWidth="1750.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <AnchorPane maxHeight="1.7976931348623157E308" minWidth="400.0" prefHeight="491.0" prefWidth="593.0" style="-fx-background-color: #fff; -fx-background-radius: 20px;" HBox.hgrow="ALWAYS">
+                           <effect>
+                              <DropShadow radius="20.9925" width="64.97">
+                                 <color>
+                                    <Color opacity="0.23664122819900513" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <children>
+                              <Label layoutX="11.0" layoutY="14.0" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="مجموع مبلغ الاشتراكات" wrapText="true" AnchorPane.topAnchor="14.0">
+                                 <font>
+                                    <Font name="PNU Medium" size="19.0" />
+                                 </font></Label>
+                              <MFXTableView fx:id="ExpenciveSubsTable_Analysis" layoutY="59.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="474.0" prefWidth="573.0" styleClass="mfx-table-view" stylesheets="@../css/Tables.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="59.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="15.0" layoutY="15.0" maxHeight="1.7976931348623157E308" minWidth="400.0" prefHeight="290.0" prefWidth="592.0" style="-fx-background-color: #fff; -fx-background-radius: 20px;" HBox.hgrow="ALWAYS">
+                           <effect>
+                              <DropShadow radius="20.9925" width="64.97">
+                                 <color>
+                                    <Color opacity="0.23664122819900513" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <children>
+                              <Label layoutX="34.0" layoutY="14.0" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="اشتراكات مجمدة" AnchorPane.topAnchor="14.0">
+                                 <font>
+                                    <Font name="PNU Medium" size="19.0" />
+                                 </font></Label>
+                              <MFXTableView fx:id="HoldSubsTable_Analysis" layoutY="60.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="473.0" prefWidth="592.0" styleClass="mfx-table-view" stylesheets="@../css/Tables.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="220.0" layoutY="15.0" maxHeight="1.7976931348623157E308" minWidth="300.0" prefHeight="290.0" prefWidth="507.0" style="-fx-background-color: #fff; -fx-background-radius: 20px;" HBox.hgrow="ALWAYS">
+                           <effect>
+                              <DropShadow radius="20.9925" width="64.97">
+                                 <color>
+                                    <Color opacity="0.23664122819900513" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="عضويات المشتركين" AnchorPane.topAnchor="14.0">
+                                 <font>
+                                    <Font name="PNU Medium" size="19.0" />
+                                 </font></Label>
+                              <VBox alignment="CENTER" layoutX="213.0" layoutY="58.0" prefHeight="466.0" prefWidth="555.0" spacing="5.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="58.0">
+                                 <children>
+                                    <AnchorPane disable="true" opacity="0.56" prefHeight="200.0" prefWidth="200.0" styleClass="analysis-BronzeMemberships" stylesheets="@../css/Widgets.css" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label disable="true" layoutX="9.0" layoutY="10.0" prefHeight="45.0" prefWidth="164.0" styleClass="label-PNUBold-24px" stylesheets="@../css/Labels.css" text="برونز Bronze" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font name="PNU Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane disable="true" layoutX="10.0" layoutY="148.0" opacity="0.56" prefHeight="200.0" prefWidth="200.0" styleClass="analysis-SilverMemberships" stylesheets="@../css/Widgets.css" VBox.vgrow="ALWAYS">
+                                       <padding>
+                                          <Insets left="8.0" right="8.0" />
+                                       </padding>
+                                       <children>
+                                          <Label disable="true" layoutX="9.0" layoutY="10.0" prefHeight="45.0" prefWidth="177.0" styleClass="label-PNUBold-24px" stylesheets="@../css/Labels.css" text="سيلفر Silver" textFill="WHITE">
+                                             <font>
+                                                <Font name="PNU Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane disable="true" layoutX="10.0" layoutY="248.0" opacity="0.56" prefHeight="200.0" prefWidth="200.0" styleClass="analysis-GoldMemberships" stylesheets="@../css/Widgets.css" VBox.vgrow="ALWAYS">
+                                       <padding>
+                                          <Insets left="8.0" right="8.0" />
+                                       </padding>
+                                       <children>
+                                          <Label disable="true" layoutX="9.0" layoutY="10.0" styleClass="label-PNUBold-24px" stylesheets="@../css/Labels.css" text="جولد Gold" textFill="WHITE">
+                                             <font>
+                                                <Font name="PNU Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="8.0" right="8.0" />
+                                 </padding>
+                              </VBox>
+                              <Label layoutX="183.0" layoutY="19.0" styleClass="label-PNUMedium-14px" stylesheets="@../css/Labels.css" text="في التحديث القادم" textFill="#0000007e">
+                                 <font>
+                                    <Font name="PNU Medium" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </MFXScrollPane>
+   </children>
+</AnchorPane>

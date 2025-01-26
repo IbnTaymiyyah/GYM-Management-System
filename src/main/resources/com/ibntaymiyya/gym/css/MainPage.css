@@ -1,0 +1,36 @@
+
+@import 'Fonts.css';
+@import 'GeneralColors.css';
+
+
+.ParentPane_mainpage{
+    -fx-background-color: -gen-white;
+}
+.alone_text{
+    -fx-font-family: "PNU Bold";
+    -fx-font-size: 40px;
+}
+
+
+.mfx-text-field {
+    -fx-font-family: 'PNU Medium';
+    -fx-font-size: 13px;
+    -fx-font-smoothing-type:gray;
+    /*-fx-border-color: -secondary-gradient;*/
+
+}
+
+.mfx-text-field:focused {
+    -fx-border-color: -gen-green;
+}
+
+
+#customField{
+    -fx-background-color: #fff;
+}
+
+
+
+
+
+

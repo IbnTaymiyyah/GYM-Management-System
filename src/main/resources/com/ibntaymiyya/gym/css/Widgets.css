@@ -1,0 +1,95 @@
+@import "GeneralColors.css";
+@import "Fonts.css";
+
+
+/*----------------------Small Widgets in Analysis Page-----------------------*/
+
+.analysis-Small-widgets {
+    -fx-effect: dropshadow(three-pass-box , rgba(0, 0, 0, 0.1), 17.7 , 0.0 , 0.0 , 0.0  );
+    -fx-background-radius: 8px;
+    -fx-background-color: -gen-white;
+}
+
+/*----------------------Bronze Memberships Widget btn in Analysis Page-----------------------*/
+
+.analysis-BronzeMemberships {
+    -fx-background-radius: 6px;
+    -fx-background-color: -bronze-gradient;
+}
+
+/*----------------------Silver Memberships Widget btn in Analysis Page-----------------------*/
+
+.analysis-SilverMemberships {
+    -fx-background-radius: 6px;
+    -fx-background-color: -silver-gradient;
+}
+
+
+/*----------------------Gold Memberships Widget btn in Analysis Page-----------------------*/
+
+.analysis-GoldMemberships {
+    -fx-background-radius: 6px;
+    -fx-background-color: -gold-gradient;
+}
+
+/*----------------------Activate Status in Setting Page-----------------------*/
+
+.setting-ActivateStatus {
+    -fx-font-family: "PNU Medium";
+    -fx-font-size: 19px;
+
+    -fx-background-radius: 6px;
+    -fx-background-color: -gen-white;
+}
+.setting-ActivateStatus.Active {
+    -fx-background-color: -analysis-greenOpacity;
+    -fx-text-fill: -gen-text-he;
+}
+.setting-ActivateStatus.NotActive {
+    -fx-background-color: -analysis-redOpacity;
+    -fx-text-fill: -gen-white;
+}
+.setting-ActivateStatus.GoExpire {
+    -fx-background-color: -analysis-orangeOpacity;
+    -fx-text-fill: -gen-text-he;
+}
+
+/*----------------------CheckList in Setting Page-----------------------*/
+
+.mfx-check-list-view  {
+   -fx-background-radius: 20px;
+
+}
+.mfx-check-list-view .virtual-flow .mfx-check-list-cell .data-label {
+    -fx-font-family: 'PNU';
+
+}
+.mfx-check-list-view .virtual-flow:hover {
+    -fx-cursor: hand;
+
+}
+
+.mfx-check-list-view .virtual-flow .mfx-check-list-cell:selected .data-label {
+    -fx-font-family: 'PNU';
+
+}
+
+
+/*----------------------Alter above Expiring Members Table in Main Page-----------------------*/
+
+.alter1{
+
+    -fx-text-fill: -gen-red;
+    -fx-background-color: -gen-redBack;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+.alter2{
+
+    -fx-text-fill: -gen-orange;
+    -fx-background-color: -analysis-orangeOpacity;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}

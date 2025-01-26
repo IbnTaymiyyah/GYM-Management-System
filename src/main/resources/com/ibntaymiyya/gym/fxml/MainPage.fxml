@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ParentPane_mainpage" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="902.0" prefWidth="1762.0" styleClass="ParentPane_mainpage" stylesheets="@../css/MainPage.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ibntaymiyya.gym.controllers.MainController">
+   <children>
+      <GridPane fx:id="grid" alignment="CENTER" prefHeight="902.0" prefWidth="1762.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BorderPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="902.0" prefWidth="1762.0" style="-fx-background-color: #F7F8FF;">
+               <left>
+                  <VBox alignment="TOP_CENTER" prefHeight="830.0" prefWidth="301.0" spacing="15.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+                     <children>
+                        <MFXTextField fx:id="memberName_main" borderGap="5.0" floatMode="BORDER" floatingText="اسم المتدرب*" prefHeight="40.0" prefWidth="272.0" styleClass="mfx-text-field" stylesheets="@../css/MainPage.css" />
+                        <MFXTextField fx:id="memberPhone_main" borderGap="5.0" floatMode="BORDER" floatingText="رقم الهاتف" layoutX="25.0" layoutY="40.0" prefHeight="45.0" prefWidth="272.0" styleClass="mfx-text-field" stylesheets="@../css/MainPage.css" textLimit="11" />
+                        <MFXComboBox fx:id="memberGender_main" floatMode="BORDER" floatingText="نوع المتدرب*" nodeOrientation="RIGHT_TO_LEFT" popupOffsetX="-400.0" prefHeight="45.0" prefWidth="272.0" scrollOnOpen="true" selectable="true" stylesheets="@../css/MainPage.css" text="ذكر" />
+                        <HBox alignment="CENTER" prefHeight="54.0" prefWidth="290.0" spacing="5.0">
+                           <children>
+                              <MFXTextField fx:id="memberAge_main" borderGap="5.0" floatMode="BORDER" floatingText="السن" prefHeight="48.0" prefWidth="87.0" styleClass="mfx-text-field" stylesheets="@../css/MainPage.css" textLimit="2" />
+                              <MFXTextField fx:id="memberWeight_main" borderGap="5.0" floatMode="BORDER" floatingText="الوزن" prefHeight="48.0" prefWidth="76.0" styleClass="mfx-text-field" stylesheets="@../css/MainPage.css" textLimit="3" />
+                              <MFXTextField fx:id="memberHeight_main" borderGap="5.0" floatMode="BORDER" floatingText="الطول" prefHeight="48.0" prefWidth="96.0" styleClass="mfx-text-field" stylesheets="@../css/MainPage.css" textLimit="3" />
+                           </children>
+                        </HBox>
+                        <MFXDatePicker fx:id="memberSubStart_main" allowEdit="false" floatMode="BORDER" floatingText="بداية الاشتراك*" nodeOrientation="RIGHT_TO_LEFT" popupOffsetX="-400.0" popupOffsetY="5.0" prefHeight="45.0" prefWidth="272.0" stylesheets="@../css/MainPage.css" textLimit="500" />
+                        <MFXDatePicker fx:id="memberSubEnd_main" allowEdit="false" floatMode="BORDER" floatingText="نهاية الاشتراك*" nodeOrientation="RIGHT_TO_LEFT" popupOffsetX="-600.0" popupOffsetY="5.0" prefHeight="45.0" prefWidth="272.0" textLimit="500" />
+                        <HBox alignment="CENTER" layoutX="15.0" layoutY="510.0" prefHeight="54.0" prefWidth="291.0" spacing="5.0">
+                           <children>
+                              <MFXButton fx:id="quickBtn1_main" depthLevel="LEVEL0" focusTraversable="false" graphicTextGap="0.0" onAction="#quickBtn1" pickOnBounds="false" prefHeight="31.0" prefWidth="84.0" rippleAnimateBackground="false" rippleColor="#6068ff" rippleRadius="7.0" styleClass="quick-buttons" stylesheets="@../css/Buttons.css" text="شهر" wrapText="true">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </MFXButton>
+                              <MFXButton fx:id="quickBtn2_main" onAction="#quickBtn2" prefHeight="31.0" prefWidth="84.0" rippleAnimateBackground="false" rippleColor="#6068ff" rippleRadius="7.0" styleClass="quick-buttons" stylesheets="@../css/Buttons.css" text="2 أشهر" wrapText="true">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </MFXButton>
+                              <MFXButton fx:id="quickBtn3_main" onAction="#quickBtn3" prefHeight="31.0" prefWidth="84.0" rippleAnimateBackground="false" rippleColor="#6068ff" rippleRadius="7.0" styleClass="quick-buttons" stylesheets="@../css/Buttons.css" text="3 أشهر" wrapText="true">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </MFXButton>
+                           </children>
+                        </HBox>
+                        <MFXTextField id="customField" fx:id="memberSubPay_main" borderGap="5.0" floatMode="BORDER" floatingText="قيمة الاشتراك ( جنيه ) *" layoutX="25.0" layoutY="448.0" prefHeight="48.0" prefWidth="272.0" stylesheets="@../css/MainPage.css" textLimit="11" />
+                        <HBox alignment="CENTER" prefHeight="54.0" prefWidth="291.0" spacing="5.0">
+                           <children>
+                              <MFXButton fx:id="quickBtnPay1_main" onAction="#quickBtn4" prefHeight="31.0" prefWidth="84.0" rippleAnimateBackground="false" rippleColor="#6068ff" rippleRadius="7.0" styleClass="quick-buttons" stylesheets="@../css/Buttons.css" text="250" wrapText="true">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </MFXButton>
+                              <MFXButton fx:id="quickBtnPay2_main" onAction="#quickBtn5" prefHeight="31.0" prefWidth="84.0" rippleAnimateBackground="false" rippleColor="#6068ff" rippleRadius="7.0" styleClass="quick-buttons" stylesheets="@../css/Buttons.css" text="400" wrapText="true">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </MFXButton>
+                              <MFXButton fx:id="quickBtnPay3_main" onAction="#quickBtn6" prefHeight="31.0" prefWidth="84.0" rippleAnimateBackground="false" rippleColor="#6068ff" rippleRadius="7.0" styleClass="quick-buttons" stylesheets="@../css/Buttons.css" text="600" wrapText="true">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </MFXButton>
+                           </children>
+                        </HBox>
+                        <Button fx:id="btnClearFields_main" alignment="CENTER" defaultButton="true" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="120.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="39.0" prefWidth="143.0" styleClass="button-Remove" stylesheets="@../css/Buttons.css" text="مسح" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="btnAddNew_main" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="150.0" mnemonicParsing="false" onAction="#addNewMember" prefHeight="45.0" prefWidth="223.0" styleClass="button-AddMember" stylesheets="@../css/Buttons.css" text="اضافة متدرب" textAlignment="CENTER" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="25.0" />
+                     </padding>
+                  </VBox>
+               </left>
+               <top>
+                  <HBox fx:id="top_hbox" alignment="CENTER_LEFT" maxWidth="-Infinity" prefHeight="48.0" prefWidth="1762.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="86.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/gym-image.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="titleTop" lineSpacing="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="label-PNUBold-40px" stylesheets="@../css/Labels.css" text="جولدن جيم Golden GYM" textFill="#e1bf00" wrapText="true">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="200.0" spacing="15.0" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="timeAM_or_PM_mainP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="AM">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="timeNumber_mainP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="label-PNU-33px" stylesheets="@../css/Labels.css" text="2:04 ">
+                                       <font>
+                                          <Font size="33.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <MFXButton buttonType="RAISED" contentDisplay="TEXT_ONLY" graphicTextGap="0.0" minWidth="100.0" onAction="#allMembersPage" prefHeight="39.0" prefWidth="167.0" styleClass="button-AllMembersPage" stylesheets="@../css/Buttons.css" text="عرض كل المشتركين" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </MFXButton>
+                              <MFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="958.0" layoutY="27.0" minWidth="75.0" onAction="#analysisPage" prefHeight="39.0" prefWidth="105.0" styleClass="button-AnalysisPage" stylesheets="@../css/Buttons.css" text="احصائيات" wrapText="true" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </MFXButton>
+                              <MFXButton buttonType="RAISED" layoutX="1408.0" layoutY="30.0" minWidth="75.0" onAction="#settingPage" prefHeight="39.0" prefWidth="105.0" styleClass="button-SettingPage" stylesheets="@../css/Buttons.css" text="الاعدادات" wrapText="true" HBox.hgrow="ALWAYS" />
+                              <Separator maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="100.0" prefWidth="1.0" style="-fx-background-color: #ececec;" />
+                              <Button fx:id="SignOut_MainPage" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#signOut" prefHeight="29.0" prefWidth="99.0" styleClass="button-SignOut" stylesheets="@../css/Buttons.css" text="تسجيل خروج" textAlignment="CENTER" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" right="10.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <effect>
+                        <DropShadow radius="11.465" width="26.86">
+                           <color>
+                              <Color opacity="0.7137404680252075" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </HBox>
+               </top>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox fx:id="Hbox_groundof_tables" nodeOrientation="RIGHT_TO_LEFT" prefHeight="830.0" prefWidth="1461.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox prefHeight="820.0" prefWidth="1074.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <MFXTableView fx:id="MainTable_MainP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="mfx-table-view" stylesheets="@../css/Tables.css" VBox.vgrow="ALWAYS">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </MFXTableView>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="820.0" prefWidth="378.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="titleTop1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="اشتراكات علي وشك الانتهاء :">
+                                       <font>
+                                          <Font size="33.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="alter1" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="332.0" text="● الاشتراكات تتوقف عن الظهور هنا بعد 15 يوم من توقف الاشتراك" wrapText="true">
+                                       <font>
+                                          <Font size="33.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" right="5.0" />
+                                       </padding>
+                                       <stylesheets>
+                                          <URL value="@../css/Labels.css" />
+                                          <URL value="@../css/Widgets.css" />
+                                       </stylesheets>
+                                       <styleClass>
+                                          <String fx:value="label-PNUMedium-12px" />
+                                          <String fx:value="alter1" />
+                                       </styleClass>
+                                    </Label>
+                                    <Label fx:id="alter2" layoutX="10.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="174.0" text="● الاشتراكات المجمده لا تظهر هنا" wrapText="true">
+                                       <font>
+                                          <Font size="33.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" right="5.0" />
+                                       </padding>
+                                       <stylesheets>
+                                          <URL value="@../css/Labels.css" />
+                                          <URL value="@../css/Widgets.css" />
+                                       </stylesheets>
+                                       <styleClass>
+                                          <String fx:value="label-PNUMedium-12px" />
+                                          <String fx:value="alter2" />
+                                       </styleClass>
+                                    </Label>
+                                    <MFXTableView fx:id="SecondTableGoExpire_MainP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="mfx-table-view" stylesheets="@../css/Tables.css" VBox.vgrow="ALWAYS" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

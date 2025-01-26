@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="502.0" style="-fx-background-color: #F7F8FF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ibntaymiyya.gym.controllers.Login">
+   <children>
+      <GridPane fx:id="grid" prefHeight="620.0" prefWidth="502.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+         <children>
+            <VBox alignment="CENTER" prefHeight="620.0" prefWidth="502.0" style="-fx-background-color: #F7F8FF;">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="217.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/gym-image.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="nameOfTheApp_Login" alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" styleClass="label-PNUBold-24px" stylesheets="@../css/Labels.css" text="جولدن جيم Golden GYM" wrapText="true" />
+                  <HBox prefHeight="24.0" prefWidth="502.0" />
+                  <HBox alignment="CENTER" prefHeight="74.0" prefWidth="502.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="LoadRegisterFields_btn" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loadRegisterFields" prefHeight="33.0" prefWidth="106.0" styleClass="button-TabsLoginPage" stylesheets="@../css/Buttons.css" text="إنشاء حساب" />
+                        <Button fx:id="LoadLoginFields_btn" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loadLoginFields" prefHeight="33.0" prefWidth="106.0" styleClass="button-TabsLoginPage" stylesheets="@../css/Buttons.css" text="تسجيل الدخول" />
+                     </children>
+                  </HBox>
+                  <StackPane fx:id="FieldsStack" prefHeight="350.0" prefWidth="502.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <AnchorPane fx:id="login_Fields_Arch" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER">
+                           <children>
+                              <VBox alignment="TOP_CENTER" layoutY="148.0" prefHeight="378.0" prefWidth="502.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="labelGood_Login" layoutX="261.0" layoutY="10.0" styleClass="label-PNUMedium-17px" stylesheets="@../css/Labels.css" text="تم انشاء الحساب" textFill="#0ad000" visible="false" wrapText="true" />
+                                    <Label fx:id="labelError_Login" styleClass="label-PNUMedium-14px" stylesheets="@../css/Labels.css" textFill="RED" />
+                                    <MFXTextField fx:id="nameOf_LoginRES" floatMode="DISABLED" nodeOrientation="RIGHT_TO_LEFT" prefColumnCount="20" prefHeight="48.0" prefWidth="347.0" promptText="اسم المستخدم" styleClass="label-PNUMedium-12px" stylesheets="@../css/Labels.css" textLimit="50">
+                                       <padding>
+                                          <Insets left="5.0" right="5.0" />
+                                       </padding>
+                                    </MFXTextField>
+                                    <MFXPasswordField fx:id="passwordOf_LoginRES" floatMode="DISABLED" nodeOrientation="RIGHT_TO_LEFT" prefHeight="48.0" prefWidth="347.0" promptText="كلمة السر" styleClass="label-PNUMedium-12px" stylesheets="@../css/Labels.css" textLimit="10" />
+                                    <Button fx:id="loginButton" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#login" prefHeight="33.0" prefWidth="106.0" styleClass="buttons-Login" stylesheets="@../css/Buttons.css" text="الدخول" wrapText="true" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="register_Fields_Arch" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0" visible="false" StackPane.alignment="CENTER">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="304.0" prefWidth="502.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <MFXTextField fx:id="nameOfNewUser" floatMode="DISABLED" nodeOrientation="RIGHT_TO_LEFT" prefColumnCount="20" prefHeight="48.0" prefWidth="347.0" promptText="اسم المستخدم" styleClass="label-PNUMedium-12px" stylesheets="@../css/Labels.css" textLimit="50">
+                                       <padding>
+                                          <Insets left="5.0" right="5.0" />
+                                       </padding>
+                                    </MFXTextField>
+                                    <Label fx:id="label_ERROR_userName" styleClass="label-PNUMedium-14px" stylesheets="@../css/Labels.css" text="Label" textFill="RED" visible="false" wrapText="true" />
+                                    <MFXPasswordField fx:id="passwordOfNewUser" floatMode="DISABLED" nodeOrientation="RIGHT_TO_LEFT" prefHeight="48.0" prefWidth="347.0" promptText="كلمة السر" styleClass="label-PNUMedium-12px" stylesheets="@../css/Labels.css" textLimit="10" />
+                                    <Label fx:id="label_ERROR_Password" styleClass="label-PNUMedium-14px" stylesheets="@../css/Labels.css" text="Label" textFill="RED" visible="false" wrapText="true" />
+                                    <HBox alignment="CENTER" prefHeight="63.0" prefWidth="502.0" spacing="10.0">
+                                       <children>
+                                          <Label styleClass="label-PNUMedium-14px" stylesheets="@../css/Labels.css" text="كود التفعيل" />
+                                          <MFXPasswordField allowEdit="false" disable="true" editable="false" floatMode="DISABLED" nodeOrientation="RIGHT_TO_LEFT" prefHeight="48.0" prefWidth="299.0" promptText="كود التفعيل" styleClass="label-PNUMedium-12px" stylesheets="@../css/Labels.css" text="انت بتعمل ايه هنا ؟" textLimit="10" />
+                                       </children>
+                                    </HBox>
+                                    <Button fx:id="registerButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addNewUser" prefHeight="33.0" prefWidth="144.0" styleClass="buttons-Login" stylesheets="@../css/Buttons.css" text="متابعة ، تسجيل الدخول" wrapText="true" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="502.0" spacing="15.0">
+                     <children>
+                        <Label fx:id="connectionTEXT" alignment="CENTER" styleClass="label-PNURegular-12px" stylesheets="@../css/Labels.css" text="متصل" />
+                        <Pane prefHeight="82.0" prefWidth="33.0">
+                           <children>
+                              <Pane fx:id="connectionBALL" layoutX="2.0" layoutY="11.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: red; -fx-background-radius: 100;" />
+                           </children>
+                        </Pane>
+                        <Label alignment="CENTER" layoutX="190.0" layoutY="40.0" styleClass="label-PNURegular-12px" stylesheets="@../css/Labels.css" text="اتصال قاعدة البيانات ( MySQL )" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </VBox>
+         </children>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,124 @@
+@import "GeneralColors.css";
+@import "Fonts.css";
+
+
+.mfx-table-view {
+    -fx-font-family: "PNU Medium";
+    -fx-font-size: 12px;
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-border-color: lightgray;
+    -fx-border-radius: 5;
+    -fx-padding: 0 0 2 0;
+
+
+
+}
+
+.mfx-table-view .columns-container {
+    -fx-border-color: transparent transparent lightgray transparent;
+}
+
+.mfx-table-view .default-footer {
+    -fx-border-color: lightgray transparent transparent transparent;
+    -fx-padding: 10;
+}
+
+.mfx-table-view .default-footer .mfx-icon-wrapper .mfx-ripple-generator {
+    -mfx-ripple-radius: 18;
+}
+
+/********************
+Table Columns
+********************/
+.mfx-table-column {
+    -fx-border-color: transparent white transparent transparent;
+    -fx-padding: 10 15 10 15;
+    -fx-wrap-text: true;
+    -fx-alignment: center;
+    -fx-font-family: "PNU Bold";
+    -fx-font-size: 15px;
+    -fx-font-smoothing-type: gray;
+
+
+
+
+}
+
+.mfx-table-column:hover,
+.mfx-table-column:dragged {
+    -fx-border-color: transparent lightgray transparent transparent;
+}
+
+/********************
+Table Rows
+********************/
+.mfx-table-row {
+   /* -fx-background-color: red;*/
+    /*-fx-min-height: 500px;   !* Minimum row height *!
+    -fx-pref-height: 500px;  !* Preferred row height *!
+    -fx-max-height: 500px;*/
+
+
+
+
+    -fx-wrap-text: true;
+    -fx-border-color: transparent transparent lightgray transparent; /* Bottom border only */
+    -fx-border-width: 0 0 1px 0; /* 1px line at the bottom */
+
+
+}
+
+.mfx-table-row:hover {
+    -fx-background-color: #F5F5F5;
+}
+
+.mfx-table-row:selected {
+    -fx-background-color: #E1E1E1;
+}
+
+.mfx-table-row .mfx-ripple-generator {
+    -mfx-ripple-radius: 30;
+    -mfx-ripple-color: #C8C8C8;
+}
+
+/********************
+Table Row Cells
+********************/
+.mfx-table-row-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 5 15 5 15;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+
+
+}
+
+.mfx-table-row-cell,
+.mfx-table-row-cell:focused {
+    -fx-border-color: transparent;
+}
+.mfx-table-row-cell .Male {
+    -fx-text-fill: #526eff;
+    -fx-background-color: rgba(123, 145, 255, 0.56);
+    -fx-background-radius: 5px;
+
+
+}
+
+.mfx-table-row-cell .Female {
+    -fx-text-fill: #db4cff;
+    -fx-background-color: rgba(222, 127, 255, 0.58);
+    -fx-background-radius: 5px;
+}
+
+
+/********************
+Virtual Flow
+********************/
+.mfx-table-view .virtual-flow {
+    -fx-background-color: transparent;
+    -track-color: rgb(230, 230, 230);
+    -thumb-color: rgb(137, 137, 137);
+    -thumb-hover-color: rgb(89, 88, 91);
+}

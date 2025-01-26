@@ -1,0 +1,128 @@
+/* Import other CSS files if needed */
+@import "GeneralColors.css";
+@import "Fonts.css";
+
+
+/*     Text Fields      */
+
+.mfx-text-field {
+    -gen-main: -gen-purple;
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-border-color: lightgray;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+    -fx-font-family: "Open Sans Regular";
+}
+
+.mfx-text-field:readonly,
+.mfx-text-field:readonly .text-field {
+    -fx-cursor: default;
+}
+
+.mfx-text-field .text-field {
+    -fx-highlight-fill: #ECE0FD;
+    -fx-prompt-text-fill: -gen-text-me;
+}
+
+.mfx-text-field .text-field .text {
+    -fx-font-smoothing-type: lcd;
+}
+
+.mfx-text-field:focus-within {
+    -fx-background-insets: 2;
+    -fx-border-color: -gen-main;
+    -fx-border-width: 1.5;
+    -fx-border-insets: -0.5;
+}
+
+.mfx-text-field .floating-text {
+    -fx-font-family: "Open Sans Regular";
+    -fx-text-fill: -gen-text-he;
+}
+
+.mfx-text-field:floating .floating-text {
+    -fx-background-color: white;
+}
+
+.mfx-text-field:focus-within .floating-text {
+    -fx-text-fill: -gen-main;
+}
+
+.mfx-text-field .measure-unit {
+    -fx-font-family: "Open Sans Regular";
+    -fx-text-fill: -gen-text-he;
+}
+
+.mfx-text-field .text-field {
+    -fx-text-box-border: transparent;
+    -fx-background-color: transparent;
+    -fx-backrgound-insets: 0;
+    -fx-padding: 0;
+}
+
+.mfx-text-field .text-field:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.mfx-text-field:disabled {
+    -fx-border-color: rgba(0, 0, 0, 0.1);
+}
+
+.mfx-text-field:disabled .floating-text {
+    -fx-text-fill: -gen-text-disabled;
+}
+
+.mfx-text-field:disabled .text-field {
+    -fx-text-inner-color: -gen-text-disabled;
+}
+
+
+
+/* The main scrollbar **track** CSS class  */
+.mfx-text-field .scroll-bar:horizontal .track,
+.mfx-text-field .scroll-bar:vertical .track{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius:2em;
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+.mfx-text-field .scroll-bar:horizontal .increment-button ,
+.mfx-text-field .scroll-bar:horizontal .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 10 0;
+
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+
+.mfx-text-field .scroll-bar:vertical .increment-button ,
+.mfx-text-field .scroll-bar:vertical .decrement-button {
+
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 10 0 0;
+
+}
+
+.mfx-text-field  .scroll-bar .increment-arrow,
+.mfx-text-field  .scroll-bar .decrement-arrow
+{
+    -fx-shape: " ";
+    -fx-padding:0;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.mfx-text-field .scroll-bar:horizontal .thumb,
+.mfx-text-field .scroll-bar:vertical .thumb {
+    -fx-background-color:derive(black,90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+
+}
+
+/*--------------------------------------------------------------*/

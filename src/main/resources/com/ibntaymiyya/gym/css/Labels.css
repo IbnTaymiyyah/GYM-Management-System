@@ -1,0 +1,67 @@
+@import "GeneralColors.css";
+@import "Fonts.css";
+
+/*----------------------PNU Bold 24px TEXT -----------------------*/
+.label-PNUBold-24px{
+    -fx-font-family: "PNU Bold";
+    -fx-font-size: 24px;
+}
+
+/*----------------------PNU 33px TEXT -----------------------*/
+.label-PNU-33px{
+    -fx-font-family: "PNU";
+    -fx-font-size: 33px;
+}
+
+/*----------------------PNU Bold 40px TEXT -----------------------*/
+.label-PNUBold-40px{
+    -fx-font-family: "PNU Bold";
+    -fx-font-size: 40px;
+}
+/*----------------------PNU Bold 50px TEXT -----------------------*/
+.label-PNUBold-50px{
+    -fx-font-family: "PNU Bold";
+    -fx-font-size: 50px;
+}
+
+/*----------------------PNU Medium 14px TEXT -----------------------*/
+.label-PNUMedium-14px{
+    -fx-font-family: "PNU Medium";
+    -fx-font-size: 14px;
+}
+/*----------------------PNU Medium 12px TEXT -----------------------*/
+.label-PNUMedium-12px{
+    -fx-font-family: "PNU Medium";
+    -fx-font-size: 12px;
+}
+/*----------------------PNU Medium 19px TEXT -----------------------*/
+.label-PNUMedium-19px{
+    -fx-font-family: "PNU Medium";
+    -fx-font-size: 19px;
+}
+/*----------------------PNU Medium 17px TEXT -----------------------*/
+.label-PNUMedium-17px{
+    -fx-font-family: "PNU Medium";
+    -fx-font-size: 17px;
+}
+
+/*----------------------PNU Regular 18px TEXT -----------------------*/
+.label-PNURegular-18px{
+    -fx-font-family: "PNU Regular";
+    -fx-font-size: 18px;
+}
+
+/*----------------------PNU Regular 14px TEXT -----------------------*/
+.label-PNURegular-14px{
+    -fx-font-family: "PNU Regular";
+    -fx-font-size: 14px;
+}
+
+/*----------------------PNU Regular 12px TEXT -----------------------*/
+.label-PNURegular-12px{
+    -fx-font-family: "PNU Regular";
+    -fx-font-size: 12px;
+}
+
+
+

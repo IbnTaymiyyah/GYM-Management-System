@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MainPane_MemberPage" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="902.0" prefWidth="1762.0" style="-fx-background-color: #F7F8FF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ibntaymiyya.gym.controllers.MemberPageController">
+   <children>
+      <GridPane fx:id="grid" prefHeight="902.0" prefWidth="1762.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BorderPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="902.0" prefWidth="1762.0" style="-fx-background-color: #F7F8FF;">
+               <top>
+                  <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="71.0" prefWidth="1762.0" spacing="5.0" style="-fx-background-color: #F7F8FF;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="1153.0" layoutY="-14.0" prefHeight="86.0" prefWidth="1601.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Button fx:id="reSub_btn" alignment="CENTER" mnemonicParsing="false" onAction="#changeMemberSub" prefHeight="45.0" styleClass="button-ReSub" stylesheets="@../css/Buttons.css" text="تجديد الاشتراك" wrapText="true">
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding></Button>
+                                    <Button fx:id="changeInfo_btn" alignment="CENTER" mnemonicParsing="false" onAction="#changeMemberInfo" prefHeight="45.0" styleClass="button-EditeInfo" stylesheets="@../css/Buttons.css" text="تعديل البيانات" wrapText="true">
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding></Button>
+                                    <Button fx:id="exportMemberInfo_btn" alignment="CENTER" mnemonicParsing="false" onAction="#exportToCSV" prefHeight="45.0" styleClass="button-ExportInfo" stylesheets="@../css/Buttons.css" text="استخراج بيانات المشترك" wrapText="true">
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding></Button>
+                                    <Button fx:id="removeMember_btn" alignment="CENTER" layoutX="885.0" layoutY="23.0" mnemonicParsing="false" onAction="#removeMember" prefHeight="45.0" styleClass="button-Remove" stylesheets="@../css/Buttons.css" text="حذف المشترك" wrapText="true">
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <MFXButton fx:id="back_btn_memberPage" buttonType="RAISED" layoutX="1616.0" layoutY="23.0" onAction="#mainPage" prefHeight="45.0" prefWidth="156.0" rippleColor="#8d8d8d" styleClass="buttonBack" stylesheets="@../css/Buttons.css" text="رجوع" wrapText="true">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </MFXButton>
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <MFXScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" style="-fx-background-color: #F7F8FF;" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+                     <content>
+                        <VBox maxHeight="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="الاسم" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="PNU Medium" size="20.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane minHeight="-Infinity" prefHeight="135.0" prefWidth="1728.0">
+                                 <children>
+                                    <Label fx:id="memberName_label" alignment="TOP_LEFT" cache="true" cacheHint="QUALITY" layoutX="-114.0" layoutY="44.0" maxHeight="1.7976931348623157E308" minHeight="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefWidth="1728.0" styleClass="label-PNUBold-50px" stylesheets="@../css/Labels.css" text="ادهم خالد السيد عبد العال" textOverrun="CLIP" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="PNU Bold" size="51.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <HBox alignment="CENTER_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="66.0" prefWidth="1728.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="TEXT_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="الاشتراك" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="PNU Medium" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="scince_label" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="359.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="label-PNUMedium-17px" stylesheets="@../css/Labels.css" text="منذ" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="PNU Medium" size="17.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="dateStart_Label" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="434.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="2024 / 07 / 02" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="PNU Medium" size="19.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <AnchorPane fx:id="statusBar" maxHeight="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="37.0" styleClass="setting-ActivateStatus" stylesheets="@../css/Widgets.css">
+                                       <HBox.margin>
+                                          <Insets bottom="15.0" left="7.0" right="7.0" top="15.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <HBox alignment="CENTER" layoutX="115.0" layoutY="-31.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="69.0" spacing="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label fx:id="statusText1_label" alignment="CENTER" contentDisplay="TEXT_ONLY" minHeight="-Infinity" minWidth="-Infinity" styleClass="label-PNUMedium-17px" stylesheets="@../css/Labels.css" text="علي وشك الانتهاء" textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font name="PNU Medium" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="statusDaysLeft_label" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-PNUMedium-17px" stylesheets="@../css/Labels.css" text="200" textAlignment="CENTER" wrapText="true">
+                                                   <font>
+                                                      <Font name="PNU Medium" size="17.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label fx:id="statusText2_label" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-PNUMedium-17px" stylesheets="@../css/Labels.css" text="يوم متبقي" textAlignment="CENTER" wrapText="true">
+                                                   <font>
+                                                      <Font name="PNU Medium" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="5.0" right="5.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                    <Label fx:id="dateTo" alignment="CENTER" contentDisplay="TEXT_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="label-PNUMedium-17px" stylesheets="@../css/Labels.css" text="حتي" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="PNU Medium" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dateEnd_label" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="359.0" layoutY="28.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="2024 / 07 / 02" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="PNU Medium" size="19.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Button fx:id="holdSub_Btn" alignment="CENTER" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#memberIsOnHold" prefHeight="43.0" styleClass="button-HoldSub" stylesheets="@../css/Buttons.css" text="تجميد الاشتراك">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="21.0" layoutY="309.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="66.0" prefWidth="1728.0" spacing="5.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="TEXT_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="كود المشترك( ID )" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="PNU Medium" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-radius: 10px; -fx-background-color: #ececec;">
+                                       <HBox.margin>
+                                          <Insets bottom="15.0" left="7.0" right="7.0" top="15.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Label fx:id="memberId_label" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="#1505" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="PNU Medium" size="21.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                    <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="763.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="رقم الهاتف" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="PNU Medium" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane layoutX="872.0" layoutY="25.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-radius: 10px; -fx-background-color: #ececec;">
+                                       <children>
+                                          <Label fx:id="memberPhone_label" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="01015539329" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="PNU Medium" size="21.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets bottom="15.0" left="7.0" right="7.0" top="15.0" />
+                                       </HBox.margin>
+                                    </AnchorPane>
+                                    <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="871.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="النوع" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="PNU Medium" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane layoutX="901.0" layoutY="25.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-radius: 10px; -fx-background-color: #ececec;">
+                                       <children>
+                                          <Label fx:id="memberGender_label" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="17.0" layoutY="6.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="ذكر" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font name="PNU Medium" size="21.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets bottom="15.0" left="7.0" right="7.0" top="15.0" />
+                                       </HBox.margin>
+                                    </AnchorPane>
+                                    <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="1107.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="العمر" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="PNU Medium" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane layoutX="1141.0" layoutY="25.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-radius: 10px; -fx-background-color: #ececec;">
+                                       <children>
+                                          <Label fx:id="mamberAge_label" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="17.0" layoutY="6.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="21 سنه" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font name="PNU Medium" size="21.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets bottom="15.0" left="7.0" right="7.0" top="15.0" />
+                                       </HBox.margin>
+                                    </AnchorPane>
+                                    <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="875.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="الوزن" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="PNU Medium" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane layoutX="928.0" layoutY="25.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-radius: 10px; -fx-background-color: #ececec;">
+                                       <children>
+                                          <Label fx:id="memberWeight_label" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="17.0" layoutY="6.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="150" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font name="PNU Medium" size="21.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets bottom="15.0" left="7.0" right="7.0" top="15.0" />
+                                       </HBox.margin>
+                                    </AnchorPane>
+                                    <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="1011.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="الطول" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="PNU Medium" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane layoutX="1035.0" layoutY="25.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-radius: 10px; -fx-background-color: #ececec;">
+                                       <children>
+                                          <Label fx:id="member_Height_label" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="17.0" layoutY="6.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="183" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font name="PNU Medium" size="21.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets bottom="15.0" left="7.0" right="7.0" top="15.0" />
+                                       </HBox.margin>
+                                    </AnchorPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <AnchorPane minHeight="-Infinity" prefHeight="61.0" prefWidth="1720.0" style="-fx-background-color: #fff; -fx-background-radius: 16;">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="422.0" layoutY="53.0" prefHeight="80.0" prefWidth="1728.0" style="-fx-background-radius: 16;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 16px;">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity">
+                                                   <children>
+                                                      <Label styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="المدفوع للأشتراك الحالي " wrapText="true">
+                                                         <font>
+                                                            <Font name="PNU Medium" size="19.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="LabelCurrentSubPayed_MemberPage" layoutX="20.0" layoutY="43.0" styleClass="label-PNUBold-24px" stylesheets="@../css/Labels.css" text="3052.00" wrapText="true">
+                                                         <font>
+                                                            <Font name="PNU Medium" size="19.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </HBox.margin>
+                                                </HBox>
+                                                <Separator minWidth="-Infinity" opacity="0.17" orientation="VERTICAL" prefWidth="1.0" style="-fx-background-color: gray; -fx-background-radius: 10;">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
+                                                   </HBox.margin>
+                                                   <padding>
+                                                      <Insets bottom="20.0" top="20.0" />
+                                                   </padding>
+                                                </Separator>
+                                                <Label styleClass="label-PNUMedium-19px" stylesheets="@../css/Labels.css" text="اجمالي المدفوع  " wrapText="true">
+                                                   <font>
+                                                      <Font name="PNU Medium" size="19.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="LabelToatalPayed_MemberPage" layoutX="20.0" layoutY="43.0" styleClass="label-PNUBold-24px" stylesheets="@../css/Labels.css" text="3052.00" wrapText="true">
+                                                   <font>
+                                                      <Font name="PNU Medium" size="19.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <HBox alignment="CENTER" minHeight="300.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff; -fx-background-radius: 16;" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Button fx:id="daietBtn" alignment="CENTER" layoutX="23.0" layoutY="14.0" mnemonicParsing="false" onAction="#addNewDietPlan" prefHeight="41.0" styleClass="button-AddDietPlane" stylesheets="@../css/Buttons.css" text="اضافة نظام غذائي " wrapText="true">
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding></Button>
+                                          <ListView fx:id="dietListView_MemberPage" layoutX="847.0" layoutY="72.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="371.0" prefWidth="1728.0" stylesheets="@../css/ListView.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="11.0" right="11.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </MFXScrollPane>
+               </center>
+            </BorderPane>
+         </children>
+      </GridPane>
+      <VBox prefHeight="200.0" prefWidth="100.0" visible="false">
+         <children>
+            <VBox fx:id="VBOX_ChangeMemberSubDialog" alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="412.0" prefWidth="363.0" spacing="10.0" visible="false">
+               <children>
+                  <Label fx:id="labelWrong_MemberDialog" styleClass="label-PNUMedium-12px" stylesheets="@../css/Labels.css" textFill="RED" wrapText="true" />
+                  <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="58.0" prefWidth="363.0" spacing="10.0">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </VBox>
+                        <MFXDatePicker fx:id="DateStart_MemberDialog" allowEdit="false" floatMode="BORDER" floatingText="بداية الاشتراك*" nodeOrientation="RIGHT_TO_LEFT" popupOffsetX="-400.0" popupOffsetY="5.0" prefHeight="45.0" prefWidth="261.0" stylesheets="@../css/MainPage.css" textLimit="500" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="73.0" prefWidth="363.0" spacing="10.0">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </VBox>
+                        <MFXDatePicker fx:id="DateEnd_MemberDialog" allowEdit="false" floatMode="BORDER" floatingText="نهاية الاشتراك*" nodeOrientation="RIGHT_TO_LEFT" popupOffsetX="-600.0" popupOffsetY="5.0" prefHeight="45.0" prefWidth="261.0" textLimit="500" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="291.0" spacing="5.0">
+                     <children>
+                        <MFXButton fx:id="quickBtn1_MemberDialog" depthLevel="LEVEL0" focusTraversable="false" graphicTextGap="0.0" onAction="#quickBtn1" pickOnBounds="false" prefHeight="31.0" prefWidth="84.0" rippleAnimateBackground="false" rippleColor="#6068ff" rippleRadius="7.0" styleClass="quick-buttons" stylesheets="@../css/Buttons.css" text="شهر" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </MFXButton>
+                        <MFXButton fx:id="quickBtn2_MemberDialog" onAction="#quickBtn2" prefHeight="31.0" prefWidth="84.0" rippleAnimateBackground="false" rippleColor="#6068ff" rippleRadius="7.0" styleClass="quick-buttons" stylesheets="@../css/Buttons.css" text="2 أشهر" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </MFXButton>
+                        <MFXButton fx:id="quickBtn3_MemberDialog" onAction="#quickBtn3" prefHeight="31.0" prefWidth="84.0" rippleAnimateBackground="false" rippleColor="#6068ff" rippleRadius="7.0" styleClass="quick-buttons" stylesheets="@../css/Buttons.css" text="3 أشهر" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </MFXButton>
+                     </children>
+                  </HBox>
+                  <MFXTextField id="customField" fx:id="Pay_MemberDialog" borderGap="5.0" floatMode="BORDER" floatingText="قيمة الاشتراك ( جنيه ) *" prefHeight="48.0" prefWidth="272.0" stylesheets="@../css/MainPage.css" textLimit="11" />
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="291.0" spacing="5.0">
+                     <children>
+                        <MFXButton fx:id="quickBtnPay1_MemberDialog" onAction="#quickBtn4" prefHeight="31.0" prefWidth="84.0" rippleAnimateBackground="false" rippleColor="#6068ff" rippleRadius="7.0" styleClass="quick-buttons" stylesheets="@../css/Buttons.css" text="250" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </MFXButton>
+                        <MFXButton fx:id="quickBtnPay2_MemberDialog" onAction="#quickBtn5" prefHeight="31.0" prefWidth="84.0" rippleAnimateBackground="false" rippleColor="#6068ff" rippleRadius="7.0" styleClass="quick-buttons" stylesheets="@../css/Buttons.css" text="400" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </MFXButton>
+                        <MFXButton fx:id="quickBtnPay3_MemberDialog" onAction="#quickBtn6" prefHeight="31.0" prefWidth="84.0" rippleAnimateBackground="false" rippleColor="#6068ff" rippleRadius="7.0" styleClass="quick-buttons" stylesheets="@../css/Buttons.css" text="600" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </MFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox fx:id="VBOX_ChangeMemberInfoDialog" alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="384.0" prefWidth="363.0" spacing="10.0" visible="false">
+         <children>
+            <Label fx:id="labelWrongChangeInfo_MemberDialog" styleClass="label-PNUMedium-12px" stylesheets="@../css/Labels.css" textFill="RED" wrapText="true" />
+            <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="58.0" prefWidth="363.0" spacing="10.0">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <children>
+                  <MFXTextField fx:id="memberName_MemberDiloag" borderGap="5.0" floatMode="BORDER" floatingText="اسم المتدرب*" prefHeight="40.0" prefWidth="272.0" styleClass="mfx-text-field" stylesheets="@../css/MainPage.css" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="73.0" prefWidth="363.0" spacing="10.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" />
+               </padding>
+               <children>
+                  <MFXTextField fx:id="memberPhone_MemberDiloag" borderGap="5.0" floatMode="BORDER" floatingText="رقم الهاتف" prefHeight="45.0" prefWidth="272.0" styleClass="mfx-text-field" stylesheets="@../css/MainPage.css" textLimit="11" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="198.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="73.0" prefWidth="363.0" spacing="10.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" />
+               </padding>
+               <children>
+                  <MFXComboBox fx:id="memberGender_MemberDiloag" floatMode="BORDER" floatingText="جنس المتدرب*" nodeOrientation="RIGHT_TO_LEFT" popupOffsetX="-400.0" prefHeight="45.0" prefWidth="272.0" scrollOnOpen="true" selectable="true" stylesheets="@../css/MainPage.css" text="ذكر" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="290.0" spacing="5.0">
+               <children>
+                  <MFXTextField fx:id="memberAge_MemberDiloag" borderGap="5.0" floatMode="BORDER" floatingText="السن" prefHeight="48.0" prefWidth="87.0" styleClass="mfx-text-field" stylesheets="@../css/MainPage.css" textLimit="2" />
+                  <MFXTextField fx:id="memberWeight_MemberDiloag" borderGap="5.0" floatMode="BORDER" floatingText="الوزن" prefHeight="48.0" prefWidth="76.0" styleClass="mfx-text-field" stylesheets="@../css/MainPage.css" textLimit="3" />
+                  <MFXTextField fx:id="memberHeight_MemberDiloag" borderGap="5.0" floatMode="BORDER" floatingText="الطول" prefHeight="48.0" prefWidth="96.0" styleClass="mfx-text-field" stylesheets="@../css/MainPage.css" textLimit="3" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="VBOX_DietPlanDialog" alignment="TOP_CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="384.0" prefWidth="363.0" spacing="10.0" visible="false">
+         <children>
+            <MFXTextField fx:id="TitelField_DietPlanDialog" floatMode="DISABLED" nodeOrientation="RIGHT_TO_LEFT" prefHeight="48.0" prefWidth="336.0" promptText="العنوان" styleClass="label-PNUMedium-17px" stylesheets="@../css/Labels.css" />
+            <TextArea fx:id="TextArea_DietPlanDialog" focusTraversable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="293.0" prefWidth="343.0" promptText="النظام الغذائي" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <stylesheets>
+                  <URL value="@../css/Fields.css" />
+                  <URL value="@../css/Labels.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="mfx-text-field" />
+                  <String fx:value="label-PNURegular-18px" />
+               </styleClass>
+            </TextArea>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

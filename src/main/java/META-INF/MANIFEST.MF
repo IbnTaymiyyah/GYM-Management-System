@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Main-Class: com.ibntaymiyya.gym.Launcher
+Class-Path: lib/opencsv-3.8.jar lib/dotenv-java-3.1.0.jar lib/materialfx
+  -11.17.0.jar lib/materialfx-11.17.0-sources.jar lib/javafx-base-21.jar
+  lib/javafx-controls-21.jar lib/javafx-fxml-21.jar lib/javafx-graphics-
+ 2 1.jar lib/mfxcore-11.8.0.jar lib/mfxeffects-11.3.0.jar lib/mfxlocaliz
+ at ion-11.1.0.jar lib/mfxresources-11.13.1.jar lib/virtualizedfx-11.9.6
+ .ja r lib/mysql-connector-j-8.0.33.jar lib/tilesfx-21.0.9.jar lib/toolb
+ ox-2 1.0.17.jar lib/toolboxfx-21.0.7.jar lib/scenicview.jar lib/poi-5.3
+ .0.ja r lib/poi-ooxml-5.3.0.jar lib/poi-ooxml-schemas-4.1.2.jar lib/xml
+ beans- 5.2.1.jar lib/controlsfx-11.1.1.jar lib/formsfx-core-11.5.0.jar 
+ lib/com mons-lang3-3.12.0.jar lib/javafx-controls-21.jar lib/javafx-fxm
+ l-21.jar lib/dotenv-java-3.1.0.jar
+

@@ -1,0 +1,504 @@
+@import "GeneralColors.css";
+@import "Fonts.css";
+
+/*----------------------Login and Register btn in Login Page-----------------------*/
+.button-TabsLoginPage {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-white;
+    -fx-background-color: -gen-purpleOpacity;
+    -fx-border-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+
+
+
+}
+.button-TabsLoginPage:hover {
+    -fx-effect: dropshadow(gaussian, -analysis-orangeOpacity, 30, 0, 0, 0);
+    -fx-background-color: #9A28FF;
+    -fx-text-fill: -gen-white;
+
+
+}
+.tabsLoginPage-Active {
+    -fx-effect: dropshadow(gaussian, -analysis-orangeOpacity, 30, 0, 0, 0);
+    -fx-background-color: #9A28FF;
+    -fx-text-fill: -gen-white;
+}
+
+/*----------------------Login and Register btn in Login Page-----------------------*/
+.buttons-Login {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: black;
+    -fx-background-color: -analysis-greenOpacity;
+    -fx-border-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+
+
+
+}
+.buttons-Login:hover {
+    -fx-effect: dropshadow(gaussian, -analysis-orangeOpacity, 30, 0, 0, 0);
+    -fx-background-color:-gen-green;
+    -fx-text-fill:-gen-white;
+
+
+}
+
+
+/*----------------------Every Back Button-----------------------*/
+.buttonBack{
+    -fx-background-radius: 10px;
+    -fx-background-color: -gen-white;
+    -fx-font-family: "PNU";
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+/*----------------------Quick Button in Main Page-----------------------*/
+.quick-buttons{
+    -fx-font-family: 'PNU Medium';
+    -fx-background-color: -gen-blueBackground;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-background-radius: 7px;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+
+}
+
+/*----------------------Remove Button in Main Page-----------------------*/
+.button-Remove {
+    -fx-font-family: 'PNU Bold';
+    -fx-text-fill: -gen-red;
+    -fx-background-color: -gen-redBack;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-background-radius: 7px;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+
+}
+
+.button-Remove:hover {
+    -fx-effect: dropshadow(gaussian, -gen-redHover, 30, 0, 0, 0);
+    -fx-text-fill: -gen-red;
+}
+
+/*----------------------Add Member btn in Main Page-----------------------*/
+.button-AddMember {
+    -fx-font-family: 'PNU Bold';
+    -fx-text-fill: -gen-white;
+    -fx-background-color: -green-gradient;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-background-radius: 7px;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+.button-AddMember:hover {
+    -fx-effect: dropshadow(three-pass-box, -gen-greenlimon, 10, 0, 0, 0);
+}
+
+/*----------------------All Members Page btn in Main Page-----------------------*/
+.button-AllMembersPage {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-text-he;
+    -fx-background-color: -gen-white;
+    -fx-border-color: -gen-yellow;
+    -fx-border-radius: 5px;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+.button-AllMembersPage:hover {
+    -fx-effect: dropshadow(gaussian, -gen-yellow, 30, 0, 0, 0);
+    -fx-background-color: -gen-yellow;
+}
+
+
+/*----------------------Analysis Page btn in Main Page-----------------------*/
+.button-AnalysisPage {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-text-he;
+    -fx-background-color: -gen-white;
+    -fx-border-color: -common-gradient;
+    -fx-border-radius: 5px;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+.button-AnalysisPage:hover {
+    -fx-effect: dropshadow(gaussian, -gen-blueFront, 30, 0, 0, 0);
+    -fx-background-color: -common-gradient;
+    -fx-text-fill: -gen-white;
+}
+
+
+/*----------------------Setting Page btn in Main Page-----------------------*/
+.button-SettingPage {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-text-he;
+    -fx-background-color: -gen-white;
+    -fx-border-color: -gen-onyx;
+    -fx-border-radius: 5px;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+
+}
+.button-SettingPage:hover {
+    -fx-effect: dropshadow(gaussian, -gen-onyx, 30, 0, 0, 0);
+    -fx-background-color: -gen-onyx;
+    -fx-text-fill: -gen-white;
+}
+
+/*----------------------Sign out btn in Main Page-----------------------*/
+.button-SignOut {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-red;
+    -fx-background-color: -gen-redBack;
+    -fx-border-radius: 5px;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+
+
+}
+
+
+/*----------------------Hold Sub btn in Member Page-----------------------*/
+.button-HoldSub {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-text-he;
+    -fx-background-color: -gen-lightorangeOpacity;
+    -fx-border-radius: 5px;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+
+
+
+}
+.button-HoldSub:hover {
+    -fx-effect: dropshadow(gaussian, -gen-lightorange, 30, 0, 0, 0);
+    -fx-background-color: -gen-lightorange;
+    -fx-text-fill: -gen-onyx;
+}
+
+
+/*----------------------Edite Info btn in Member Page-----------------------*/
+.button-EditeInfo {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-white;
+    -fx-background-color: -gen-grayOpacity;
+    -fx-border-radius: 5px;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+
+
+
+}
+.button-EditeInfo:hover {
+    -fx-effect: dropshadow(gaussian, -gen-grayOpacity, 30, 0, 0, 0);
+    -fx-background-color: -mystic-gradient;
+    /*-fx-text-fill: -gen-white;*/
+}
+
+/*----------------------Export btn in Member Page-----------------------*/
+.button-ExportInfo {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-white;
+    -fx-background-color: -gen-lushgreenOpacity;
+    -fx-border-radius: 5px;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+
+
+
+}
+.button-ExportInfo:hover {
+    -fx-effect: dropshadow(gaussian, -gen-lushgreenOpacity, 30, 0, 0, 0);
+    -fx-background-color: -lush-gradient;
+    /*-fx-text-fill: -gen-white;*/
+}
+
+/*----------------------ReSub btn in Member Page-----------------------*/
+.button-ReSub {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-white;
+    -fx-background-color: -gen-telegramOpacity;
+    -fx-border-radius: 5px;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+
+
+
+}
+.button-ReSub:hover {
+    -fx-effect: dropshadow(gaussian, -gen-telegramOpacity, 30, 0, 0, 0);
+    -fx-background-color: -telegram-gradient;
+    /*-fx-text-fill: -gen-white;*/
+}
+
+/*----------------------Add New Diet Plane btn in Member Page-----------------------*/
+.button-AddDietPlane {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-white;
+    -fx-background-color: -gen-purpleOpacity;
+    -fx-border-radius: 5px;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+
+
+
+}
+.button-AddDietPlane:hover {
+    -fx-effect: dropshadow(gaussian, -gen-purpleOpacity, 30, 0, 0, 0);
+    -fx-background-color: -gen-purple;
+    /*-fx-text-fill: -gen-white;*/
+}
+
+/*----------------------Profit btn in Analysis Page-----------------------*/
+.button-ProfitAnalysis {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-text-he;
+    -fx-background-color: -analysis-greenOpacity;
+    -fx-border-radius: 5px;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+
+
+
+}
+.button-ProfitAnalysis:hover {
+    -fx-effect: dropshadow(gaussian, -analysis-greenOpacity, 30, 0, 0, 0);
+    -fx-background-color: -analysis-green;
+    /*-fx-text-fill: -gen-white;*/
+}
+
+.profit-Active {
+    -fx-effect: dropshadow(gaussian, -analysis-greenOpacity, 30, 0, 0, 0);
+    -fx-background-color: -analysis-green;
+    /*-fx-text-fill: -gen-white;*/
+}
+
+/*----------------------All Members btn in Analysis Page-----------------------*/
+.button-AllMembersAnalysis {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-text-he;
+    -fx-background-color: -analysis-blueOpacity;
+    -fx-border-radius: 5px;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+
+
+
+}
+.button-AllMembersAnalysis:hover {
+    -fx-effect: dropshadow(gaussian, -analysis-blueOpacity, 30, 0, 0, 0);
+    -fx-background-color: -analysis-blue;
+    -fx-text-fill: -gen-white;
+}
+
+.allMembers-Active{
+    -fx-effect: dropshadow(gaussian, -analysis-blueOpacity, 30, 0, 0, 0);
+    -fx-background-color: -analysis-blue;
+    -fx-text-fill: -gen-white;
+}
+
+/*----------------------Expire Sub btn in Analysis Page-----------------------*/
+.button-ExpireSubAnalysis {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-text-he;
+    -fx-background-color: -analysis-redOpacity;
+    -fx-border-radius: 5px;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+
+
+
+}
+.button-ExpireSubAnalysis:hover {
+    -fx-effect: dropshadow(gaussian, -analysis-redOpacity, 30, 0, 0, 0);
+    -fx-background-color: -analysis-red;
+    -fx-text-fill: -gen-white;
+}
+
+.expireSub-Active {
+    -fx-effect: dropshadow(gaussian, -analysis-redOpacity, 30, 0, 0, 0);
+    -fx-background-color: -analysis-red;
+    -fx-text-fill: -gen-white;
+}
+
+/*----------------------Hold Subs btn in Analysis Page-----------------------*/
+.button-HoldSubsAnalysis {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-text-he;
+    -fx-background-color: -analysis-orangeOpacity;
+    -fx-border-radius: 5px;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+
+
+
+}
+.button-HoldSubsAnalysis:hover {
+    -fx-effect: dropshadow(gaussian, -analysis-orangeOpacity, 30, 0, 0, 0);
+    -fx-background-color: -analysis-orange;
+    /*-fx-text-fill: -gen-white;*/
+}
+.holdSubs-Active {
+    -fx-effect: dropshadow(gaussian, -analysis-orangeOpacity, 30, 0, 0, 0);
+    -fx-background-color: -analysis-orange;
+   /* -fx-text-fill: -gen-white;*/
+}
+
+
+/*----------------------Resume Subs btn in Hold Subs Table Analysis Page-----------------------*/
+.button-ResumeSubsAnalysis {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-text-he;
+    -fx-background-color: -analysis-orangeOpacity;
+    -fx-border-radius: 5px;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+
+
+
+
+}
+.button-ResumeSubsAnalysis:hover {
+    -fx-effect: dropshadow(gaussian, -analysis-orangeOpacity, 30, 0, 0, 0);
+    -fx-background-color: -analysis-orange;
+
+
+}
+
+/*----------------------Normal Button in Setting Page Data tab-----------------------*/
+.button-NormalBTN-Setting {
+    -fx-font-family: 'PNU Medium';
+    -fx-text-fill: -gen-text-he;
+    -fx-background-color: -gen-white;
+    -fx-border-radius: 5px;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+    -fx-border-color: -gen-purple;
+}
+.button-NormalBTN-Setting:hover {
+    -fx-effect: dropshadow(gaussian, -gen-purple, 30, 0, 0, 0);
+    -fx-text-fill: -gen-white;
+    -fx-background-color: -gen-purple;
+}
+
+
+/*----------------------More Btn in TableView -Main Page-----------------------*/
+
+.button-MoreBtn-tableView {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 0;
+    -fx-text-fill: black;
+    -fx-font-size: 12px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-pref-height: 0px;
+    -fx-pref-width: 20px;
+    -fx-cursor: hand;
+    -fx-start-margin: 15px;
+    -fx-end-margin: 20px;
+    -fx-alignment: center;
+}
+
+.button-MoreBtn-tableView:hover{
+    -fx-background-color: -gen-blueBackground-height;
+    -fx-fit-to-height: true;
+
+}
+
+/*----------------------Telegram Button in Setting Page-----------------------*/
+.button-Telegram {
+    -fx-font-family: 'PNU Bold';
+    -fx-text-fill: white;
+    -fx-background-color: -telegram-gradient;
+    -fx-background-radius: 5px;
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+
+}
+
+
+/*----------------------Telegram Button in Setting Page-----------------------*/
+.button-Github {
+    -fx-font-family: 'PNU Bold';
+    -fx-text-fill: white;
+    -fx-background-color: -gen-github;
+    -fx-background-radius: 5px;
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+
+}
+
+
+
+

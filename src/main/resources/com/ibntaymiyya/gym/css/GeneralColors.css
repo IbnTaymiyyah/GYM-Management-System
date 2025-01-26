@@ -1,0 +1,51 @@
+* {
+    -gen-blueBackground: #F7F8FF;
+    -gen-blueBackground-height: rgba(216, 219, 255, 0.82);
+    -gen-white: #fff ;
+    -gen-charcoal: #445055;
+    -gen-green: #4caf50;
+    -gen-greenlimon:#00AE67FF;
+    -gen-onyx: #353935;
+    -gen-github: #1F1F1F;
+    -gen-orange: #ff9800;
+    -gen-purple: #9e3fff;
+    -gen-purpleOpacity: rgba(122, 14, 217, 0.51);
+    -gen-red: #ff0400;
+    -gen-redHover: rgba(255, 4, 0, 0.53);
+    -gen-redBack: rgba(220, 3, 0, 0.25);
+    -gen-yellow: #FFEA00;
+    -gen-lightorange: #FFB200;
+    -gen-lightorangeOpacity: rgba(255, 178, 0, 0.44);
+    -gen-blueFront: #d5d9ff;
+    -gen-grayOpacity: rgba(117, 127, 154, 0.48);
+    -gen-lushgreenOpacity: rgba(86, 171, 47, 0.62);
+    -gen-telegramOpacity: rgba(28, 146, 210, 0.59);
+
+    -analysis-greenOpacity: #09ff0033;
+    -analysis-green : #09ff00;
+
+    -analysis-blueOpacity : #0036fa24;
+    -analysis-blue : #0036fa;
+
+    -analysis-redOpacity : #eb575724;
+    -analysis-red : #eb5757;
+
+    -analysis-orangeOpacity : #ffca0024;
+    -analysis-orange : #ffca00;
+
+
+
+    -gen-text-he: rgba(0, 0, 0, 0.87); /* High Emphasis */
+    -gen-text-me: rgba(0, 0, 0, 0.60); /* Medium Emphasis*/
+    -gen-text-disabled: rgba(0, 0, 0, 0.38); /* Disabled */
+
+    -bronze-gradient: linear-gradient(to left top, #CD7F32, #181818);
+    -silver-gradient: linear-gradient(to left top, #757F9A, #181818);
+    -gold-gradient: linear-gradient(to left top,  #FFC300 , #181818);
+
+    -telegram-gradient: linear-gradient(to right top, #1c92d2, #9eb7ec);
+    -lush-gradient: linear-gradient(to left top, #56ab2f, #a8e063);
+    -mystic-gradient: linear-gradient(to left top, #757F9A, #8f939b);
+    -common-gradient: linear-gradient(to right bottom, #c4008b, #d00085, #dc007f, #e60b79, #ef1872, #f5276b, #fa3564, #fe415e, #ff5158, #ff5f52, #ff6c4e, #ff794b);
+    -green-gradient: linear-gradient(to right bottom, #1ec400, #00bd3a, #00b654, #00ae67, #00a574, #00a280, #009e8a, #009a91, #009b9d, #009ba8, #009bb2, #009abb);
+}

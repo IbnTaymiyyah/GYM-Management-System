@@ -1,0 +1,55 @@
+@import "GeneralColors.css";
+@import "Fonts.css";
+
+.tab-pane {
+    -fx-alignment: top-center;
+    -fx-text-fill: -gen-text-he;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: transparent;
+    -fx-alignment: top-center;
+    -fx-text-fill: -gen-text-he;
+}
+
+.tab-pane .tab-header-area .tab {
+    -fx-background-color: transparent;
+    -fx-padding: 5px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.13), 10, 0.2, 0, 0);
+    -fx-cursor: hand;
+    -fx-background-insets: 0 5px 0 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-alignment: top-center;
+    -fx-text-fill: -gen-text-he;
+
+}
+
+.tab-pane .tab-header-area .tab:selected {
+    -fx-background-color: transparent;
+    -fx-border-color: #9A28FF;
+    -fx-border-width: 0 0 5px 0;
+}
+
+.tab-pane .tab-header-area .tab .tab-label {
+    -fx-font-family: 'PNU Medium';
+    -fx-font-size: 13px;
+    -fx-text-fill: -gen-text-he;
+}
+
+.tab-pane .tab-header-area .tab:selected .tab-label {
+    -fx-text-fill: -gen-text-he;
+}
+
+.tab-pane .tab-header-area .tab-content-area {
+    -fx-padding: 20 10px;
+    -fx-alignment: top-center;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+
