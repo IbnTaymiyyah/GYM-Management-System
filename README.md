@@ -3,7 +3,8 @@
 
 
 
-![GYM-POST-_0](https://github.com/user-attachments/assets/77f48822-2807-41e4-be11-c934e07074a4)
+
+![GYM-POST-_0](https://github.com/user-attachments/assets/10dd6059-b224-4c8d-9dfc-a8aa81d256b4)
 
 
 
